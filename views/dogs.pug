@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    h1= title
+    div(class="container-fluid")
+        div(class="row")
+            -
+                var dogs = [
+                    {
+                        "Dog_breed":"German Sheperd" ,
+                        "age": "3",
+                        "Dog_name":"rocky"
+                    },
+                    {
+                        "Dog_breed":"Rotwiller" ,
+                        "age": "2" ,
+                        "Dog_name":"milo"
+                    },
+                    {
+                        "Dog_breed":"Bulldog" ,
+                        "age": "6" ,
+                        "Dog_name":"oscar"
+                    }
+                ]
+            each i, index in dogs 
+                    div(class="col-sm-2" onclick=`buy(${index})`) #{i.Dog_breed}
+                    div(class="col-sm-2" onclick=`buy(${index})`) #{i.age}
+                    div(class="col-sm-2" onclick=`buy(${index})`) #{i.Dog_name}
+    script.
+        function buy(p)
+        {
+            alert(`You have choosed dog ${p+1}`);
+        }
