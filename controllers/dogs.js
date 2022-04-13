@@ -36,3 +36,16 @@ exports.dogs_list = async function(req, res) {
         res.send(`{"error": ${err}}`); 
     }   
 }; 
+
+// VIEWS 
+// Handle a show all view 
+exports.dogs_view_all_Page = async function(req, res) { 
+    try{ 
+        thedogs = await dogs.find(); 
+        res.render('dogs', { title: 'dogs Search Results', results: thedogs }); 
+    } 
+    catch(err){ 
+        res.status(500); 
+        res.send(`{"error": ${err}}`); 
+    }   
+}; 
