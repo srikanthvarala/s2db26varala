@@ -24,3 +24,15 @@ exports.dogs_delete = function(req, res) {
 exports.dogs_update_put = function(req, res) { 
     res.send('NOT IMPLEMENTED: dogs update PUT' + req.params.id); 
 }; 
+
+// List of all dogs
+exports.dogs_list = async function(req, res) { 
+    try{ 
+        thedogs = await dogs.find(); 
+        res.send(thedogs); 
+    } 
+    catch(err){ 
+        res.status(500); 
+        res.send(`{"error": ${err}}`); 
+    }   
+}; 
