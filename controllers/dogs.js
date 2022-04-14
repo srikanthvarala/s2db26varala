@@ -49,3 +49,24 @@ exports.dogs_view_all_Page = async function(req, res) {
         res.send(`{"error": ${err}}`); 
     }   
 }; 
+
+// Handle dogs create on POST. 
+exports.dogs_create_post = async function(req, res) { 
+    console.log(req.body) 
+    let document = new dogs(); 
+    // We are looking for a body, since POST does not have query parameters. 
+    // Even though bodies can be in many different formats, we will be picky 
+    // and require that it be a json object 
+    // {"dogs_type":"goat", "cost":12, "size":"large"} 
+    document.Dog_breed = req.body.Dog_breed; 
+    document.age = req.body.age; 
+    document.Dog_name = req.body.Dog_name; 
+    try{ 
+        let result = await document.save(); 
+        res.send(result); 
+    } 
+    catch(err){ 
+        res.status(500); 
+        res.send(`{"error": ${err}}`); 
+    }   
+}; 
