@@ -9,6 +9,18 @@ var dogs_controller = require('../controllers/dogs');
  
 // GET resources base. 
 router.get('/', api_controller.api); 
+
+/* GET detail costume page */ 
+router.get('/detail', dogs_controller.dogs_view_one_Page); 
+
+/* GET create costume page */ 
+router.get('/create', dogs_controller.dogs_create_Page); 
+
+/* GET create update page */ 
+router.get('/update', dogs_controller.dogs_update_Page); 
+
+/* GET delete costume page */ 
+router.get('/delete', dogs_controller.dogs_delete_Page); 
  
 /// dogs ROUTES /// 
  
