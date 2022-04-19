@@ -1,6 +1,11 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  border: 5px solid #000000;
+  flex: display;
+  flex-direction: row;
+  text-align: center;
+
 }
 
 a {
@@ -10,4 +15,19 @@ a {
 .dogsAttr { 
   background-color: aquamarine; 
   width: 120px; 
+  flex:display;
+  flex-direction: row;
+  text-align: center;
+  
 } 
+.dogsDAttr{
+  background-color: antiquewhite;
+  width: 120px;
+  border: 2px dashed #000000;
+}
+
+.container
+{
+  width: 250px;
+  height: 200px;
+}

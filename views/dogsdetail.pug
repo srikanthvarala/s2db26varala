@@ -9,16 +9,16 @@ block content
   - let breed = toShow.Dog_breed 
   - let age = toShow.age 
   - let name = toShow.Dog_name 
-  div 
+  div(class = 'container')
     div.row 
       div(class='dogsAttr mr-3') dogs ID is: 
       div #{dogid} 
     div.row 
       div(class='dogsAttr mr-3') dogs breed is: 
-      div #{breed} 
+      div(class='dogsDAttr') #{breed} 
     div.row 
       div(class='dogsAttr mr-3') dogs age is: 
-      div #{age} 
+      div(class='dogsDAttr') #{age} 
     div.row 
       div(class='dogsAttr mr-3') dogs name is: 
-      div #{name} 
+      div(class='dogsDAttr') #{name} 
