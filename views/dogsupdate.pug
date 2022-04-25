@@ -6,9 +6,9 @@ block content
     h2 No instances to detail 
   else 
   - let dogsid = toShow._id 
-  - let breed = toShow.Dog_breed 
-  - let dogage = toShow.age 
-  - let dogname = toShow.Dog_name 
+  - let Dog_breed  = toShow.Dog_breed 
+  - let age = toShow.age 
+  - let Dog_name = toShow.Dog_name 
    
   div.row(class='mb-2') 
     div.mr-1 ID is 
@@ -16,14 +16,14 @@ block content
   - let actionid = "/resource/dogs/"+dogsid 
   form(id='dogsForm', action= actionid, method="PUT") 
     div.form-group 
-        label.dogsAttr(for='dogs_type') dogs breed 
-        input#dogs_type(type='text', name='dogs_type', value= breed ) 
+        label.dogsAttr(for='Dog_breed') dogs breed 
+        input#Dog_breed(type='text', name='Dog_breed', value= Dog_breed ) 
     div.form-group 
-        label.dogsAttr(for='size') dogs age 
-        input#age(type='number', name='size', value= dogage ) 
+        label.dogsAttr(for='age') dogs age 
+        input#age(type='number', name='age', value= age ) 
     div.form-group 
-        label.dogsAttr(for='dogname') dogs name 
-        input#dogname(type='text', name='dogname', value= dogname ) 
+        label.dogsAttr(for='Dog_name') dogs name 
+        input#Dog_name(type='text', name='Dog_name', value= Dog_name ) 
     input(type="submit") 
  
   script. 
